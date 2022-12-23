@@ -29,9 +29,9 @@ class userController{
                         await newUser.save()
                        
                         // JWT create
-                        const saved_user=await userModel.findOne({email:email})
-                        const token=jwt.sign({userID:saved_user._id},process.env.JWT_SECRET_KEY,{expiresIn:'5d'})
-                        res.status(201).send({"status":"success","message":"Registeration successfully...","token":token})
+                        //const saved_user=await userModel.findOne({email:email})
+                        //const token=jwt.sign({userID:saved_user._id},process.env.JWT_SECRET_KEY,{expiresIn:'5d'})
+                        res.status(201).send({"status":"success","message":"Registeration successfully..."})
 
 
                     } catch (error) {
